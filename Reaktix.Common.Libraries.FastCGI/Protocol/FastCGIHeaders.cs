@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Reaktix.Common.Libraries.FastCGI
+namespace Reaktix.Common.Libraries.FastCGI.Protocol
 {
-    public class FastCGIHeaders
+    class FastCGIHeaders
     {
         public List<KeyValuePair<String, String>> Headers = new List<KeyValuePair<string, string>>();
 

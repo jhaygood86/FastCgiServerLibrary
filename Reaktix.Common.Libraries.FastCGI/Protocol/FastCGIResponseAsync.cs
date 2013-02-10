@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Reaktix.Common.Libraries.FastCGI
+namespace Reaktix.Common.Libraries.FastCGI.Protocol
 {
-    public class FastCGIResponseAsync
+    class FastCGIResponseAsync
     {
         public FastCGIOutputStream StdOutStream;
         public FastCGIOutputStream StdErrStream;

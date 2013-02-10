@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5E20EBFD-5D1F-4B44-B349-579D68EDEB93}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{645FAC35-4AE8-4193-8722-D3D56B5D0177}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Reaktix.Common.Libraries.FastCGI</RootNamespace>
-    <AssemblyName>Reaktix.Common.Libraries.FastCGI</AssemblyName>
+    <RootNamespace>Reaktix.Common.Libraries.FastCGI.TestApplication</RootNamespace>
+    <AssemblyName>Reaktix.Common.Libraries.FastCGI.TestApplication</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -39,21 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FastCGIRequest.cs" />
-    <Compile Include="FastCGIResponse.cs" />
-    <Compile Include="FastCGIServer.cs" />
-    <Compile Include="Handler\FastCGIServerHandler.cs" />
-    <Compile Include="Protocol\FastCGI.cs" />
-    <Compile Include="Protocol\FastCGIHeaders.cs" />
-    <Compile Include="Protocol\FastCGIInputStream.cs" />
-    <Compile Include="Protocol\FastCGIOutputStream.cs" />
-    <Compile Include="Protocol\FastCGIPacket.cs" />
-    <Compile Include="Protocol\FastCGIRequestAsync.cs" />
-    <Compile Include="Protocol\FastCGIResponseAsync.cs" />
-    <Compile Include="Protocol\FastCGIServerAsync.cs" />
-    <Compile Include="Protocol\FastCGIServerClientHandlerAsync.cs" />
-    <Compile Include="Protocol\FastCGIServerClientRequestHandlerAsync.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Reaktix.Common.Libraries.FastCGI\Reaktix.Common.Libraries.FastCGI.csproj">
+      <Project>{5e20ebfd-5d1f-4b44-b349-579d68edeb93}</Project>
+      <Name>Reaktix.Common.Libraries.FastCGI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

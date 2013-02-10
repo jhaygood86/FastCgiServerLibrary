@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reaktix.Common.Libraries.FastCGI", "Reaktix.Common.Libraries.FastCGI\Reaktix.Common.Libraries.FastCGI.csproj", "{5E20EBFD-5D1F-4B44-B349-579D68EDEB93}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reaktix.Common.Libraries.FastCGI.TestApplication", "Reaktix.Common.Libraries.FastCGI.TestApplication\Reaktix.Common.Libraries.FastCGI.TestApplication.csproj", "{645FAC35-4AE8-4193-8722-D3D56B5D0177}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{5E20EBFD-5D1F-4B44-B349-579D68EDEB93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E20EBFD-5D1F-4B44-B349-579D68EDEB93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E20EBFD-5D1F-4B44-B349-579D68EDEB93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{645FAC35-4AE8-4193-8722-D3D56B5D0177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{645FAC35-4AE8-4193-8722-D3D56B5D0177}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{645FAC35-4AE8-4193-8722-D3D56B5D0177}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{645FAC35-4AE8-4193-8722-D3D56B5D0177}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

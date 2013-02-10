@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Reaktix.Common.Libraries.FastCGI
+namespace Reaktix.Common.Libraries.FastCGI.Protocol
 {
-    public class FastCGIPacket
+    class FastCGIPacket
     {
         public byte Version = 1;
         public FastCGI.PacketType Type;

@@ -7,24 +7,18 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Reaktix.Common.Libraries.FastCGI
+namespace Reaktix.Common.Libraries.FastCGI.Protocol
 {
-    public abstract class FastCGIServerAsync
+    abstract class FastCGIServerAsync
     {
         protected TcpListener TcpListener;
-        protected CancellationToken CancellationToken;
         public bool Debug = false;
 
         public abstract Task HandleRequestAsync(FastCGIRequestAsync Request, FastCGIResponseAsync Response);
 
-        public void ListenAsyncAndWait(ushort Port, string Address = "0.0.0.0")
+        public async Task ListenAsync(int Port, IPAddress Address)
         {
-            ListenAsync(Port, Address).Wait();
-        }
-
-        public async Task ListenAsync(ushort Port, string Address = "0.0.0.0")
-        {
-            TcpListener = new TcpListener(IPAddress.Parse(Address), Port);
+            TcpListener = new TcpListener(Address, Port);
             TcpListener.Start();
             if (Debug)
             {
@@ -35,16 +29,6 @@ namespace Reaktix.Common.Libraries.FastCGI
             {
                 var FastcgiServerClientHandlerAsync = new FastCGIServerClientHandlerAsync(this, await TcpListener.AcceptTcpClientAsync());
                 await FastcgiServerClientHandlerAsync.Handle();
-            }
-        }
-
-        public void Listen(ushort Port, string Address = "0.0.0.0")
-        {
-            ListenAsync(Port, Address);
-
-            while (true)
-            {
-                Thread.Sleep(int.MaxValue);
             }
         }
     }

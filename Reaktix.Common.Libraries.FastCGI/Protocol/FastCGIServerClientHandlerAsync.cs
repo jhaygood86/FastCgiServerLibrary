@@ -6,9 +6,9 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Reaktix.Common.Libraries.FastCGI
+namespace Reaktix.Common.Libraries.FastCGI.Protocol
 {
-    public class FastCGIServerClientHandlerAsync
+    class FastCGIServerClientHandlerAsync
     {
 		public FastCGIServerAsync FastcgiServerAsync { get; set; }
 		protected TcpClient Client;

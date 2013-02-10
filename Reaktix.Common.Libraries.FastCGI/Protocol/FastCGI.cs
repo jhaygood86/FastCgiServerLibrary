@@ -21,9 +21,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Reaktix.Common.Libraries.FastCGI
+namespace Reaktix.Common.Libraries.FastCGI.Protocol
 {
-    public class FastCGI
+    class FastCGI
     {
         public enum ProtocolStatus
         {
