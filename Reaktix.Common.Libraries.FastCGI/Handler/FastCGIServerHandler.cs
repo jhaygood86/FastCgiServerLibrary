@@ -44,7 +44,7 @@ namespace Reaktix.Common.Libraries.FastCGI.Handler
         {
             var handler = handlers[request.Params["SCRIPT_FILENAME"]];
 
-            FastCGIRequest requestArg = new FastCGIRequest();
+            FastCGIRequest requestArg = new FastCGIRequest(request);
 
             var responseResult = handler(requestArg);
 
